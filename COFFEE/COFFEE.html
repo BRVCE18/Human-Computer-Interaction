@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>  CHOCO CAFE  </title>
+
+<style>
+
+@font-face { font-family: HOTGRILL; src: url('Hotgrilldemo-rgxWy.ttf'); } 
+
+body {
+	margin: 0;
+	position: relative;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	background-color: rgba(51,37,26,255);
+	height: 870px;
+}
+
+.tablet {
+	position: fixed;;
+	width: 100%;
+	height: 656px;
+	background-color: black;
+	text-align: center;
+	font-size: 50px;
+	color: white;
+	top: 0;
+	z-index: 2;
+}
+
+@media only screen and (max-width: 681px) {
+	.tablet {
+		display: none;
+	}
+}
+
+.logo {
+	display: block;
+	margin: 0px auto;
+	width: 40%;
+	z-index: 1;
+	filter: drop-shadow(0px 0px 15px black);
+}
+
+.body {
+	display: block;
+	margin: -35px auto;
+	width: 95%;
+	height: 690px;
+	text-align: center;
+}
+
+.bg {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	margin-left: -31%;
+}
+
+.left, .right {
+	float: left;
+	height: 650px;
+	border: 2px solid orange;
+	text-align: center;
+	background-color: rgba(0,0,0,.8);
+	z-index: -1;
+}
+
+.left {
+	margin-right: 1%;
+	width: 52%;
+}
+
+.right {
+	width: 45%;
+}
+
+.orders, .drinks {
+	font-size: 30px;
+	font-family: HOTGRILL;
+	color: white;
+}
+
+.button2 {
+	width: 150px;
+	height: 50px;
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+	border-radius: 5px;
+	cursor: pointer;
+	opacity: 0.3;
+}
+
+.button2:hover {
+	background-color: rgba(255,150,58,255);
+	color: black;
+	border: 2px solid rgba(255,150,58,255);
+	font-weight: bold;
+}
+
+.buttonreset {
+	width: 100px;
+	height: 30px;
+	background: transparent;
+	color: white;
+	border: 2px solid brown;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 15px;
+	opacity: 0.3;
+}
+
+.buttonreset:hover {
+	background-color: brown;
+	color: pink;
+	border: 2px solid brown;
+	bottom: 0;
+}
+
+.total {
+	width: 75%;
+	height: 5%;
+	font-size: 110%;
+	pointer-events: none;
+	padding-left: 2%;
+	text-align: center;
+	opacity: 0.3;
+}
+
+.table {
+	margin: 0px auto;
+	width: 94%;
+	height: 30px;
+	color: white;
+}
+
+th {
+	border: 1px solid gray;
+	height: 30px;
+}
+
+.bottom {
+	width: 100%;
+	margin-top: 17%;
+}
+
+.TXTdrinks1 {
+	width: 63%;
+	height: 5%;
+	font-size: 110%;
+	pointer-events: none;
+	padding-left: 2%;
+	opacity: 0.3;
+}
+
+.TXTdrinks2 {
+	width: 19%;
+	height: 5%;
+	font-size: 110%;
+	pointer-events: none;
+	text-align: center;
+	opacity: 0.3;
+}
+
+.TXTdrinks3 {
+	width: 19%;
+	height: 80%;
+	font-size: 110%;
+	pointer-events: none;
+	text-align: center;
+	position: absolute;
+	right: 5%;
+	opacity: 0.3;
+}
+
+.DIVdrink {
+	text-align: left;
+	width: 100%;
+	font-size: 22px;
+	position: relative;
+}
+
+.CHKdrink {
+	width: 22px;
+	height: 22px;
+	margin-left: 5%;
+	cursor: pointer;
+}
+
+.label1 {
+	color: white;
+}
+
+.DIVsize {
+	width: 50%;
+	margin-left: 15%;
+	text-align: left;
+	margin-bottom: 7%;
+}
+
+.label2 {
+	color: white;
+	font-size: 12px;
+	opacity: 0.5;
+}
+
+.RADsize {
+	opacity: 0.2;
+}
+
+.button1 {
+	width: 130px;
+	height: 40px;
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+	border-radius: 5px;
+	cursor: pointer;
+	opacity: 0.3;
+}
+
+.button1:hover {
+	background-color: rgba(255,150,58,255);
+	color: black;
+	border: 2px solid rgba(255,150,58,255);
+	font-weight: bold;
+}
+
+.talk {
+	color: white;
+	width: 100%;
+	font-weight: bold;
+	float: left;
+	margin-top: 20px;
+}
+
+a {
+	color: orange;
+	text-decoration: none;
+}
+
+a:hover {
+	color: orange;
+	text-decoration: underline;
+}
+
+</style>
+
+</head>
+
+<!==============================================================================>
+
+<body>
+<form>
+
+	<img class="bg" src="coffee.jpg"> 
+	
+	<div class="tablet"> 
+		<p> <br> <br> <br> <br> SET WINDOW SIZE TO TABLET SIZE (681px) </p>
+	</div>
+	
+	<img class="logo" src="logo.png"> 
+	
+	<div class="body">
+		<div class="left"> <br>
+		
+			<span class="drinks"> DRINKS </span>
+			<br> <br> <br>
+			
+			<table class="table">
+				<tr>
+					<th>Choose Your Order /s</th>
+				</tr>
+			</table>
+			
+			<br> <br> 
+			
+			<div class="DIVdrink">
+				<input type="checkbox" class="CHKdrink" id="CREAM"> <label class="label1"> Espresso (75) </label>
+				<input type="text" class="TXTdrinks3" placeholder="#" readonly>
+			</div>
+			
+			<div class="DIVsize">
+				<input type="radio" class="RADsize" id="CREAM"> <label class="label2"> Normale </label> <br>
+				<input type="radio" class="RADsize" id="CREAM"> <label class="label2"> Grande (+35) </label> <br>
+				<input type="radio" class="RADsize" id="CREAM"> <label class="label2"> Gigante (+60) </label>
+			</div>
+			
+			<div class="DIVdrink">
+				<input type="checkbox" class="CHKdrink" id="CREAM"> <label class="label1"> Macchiato (100) </label>
+				<input type="text" class="TXTdrinks3" placeholder="#" readonly>
+			</div>
+			
+			<div class="DIVsize">
+				<input type="radio" class="RADsize" id="CREAM"> <label class="label2"> Normale </label> <br>
+				<input type="radio" class="RADsize" id="CREAM"> <label class="label2"> Grande (+35) </label> <br>
+				<input type="radio" class="RADsize" id="CREAM"> <label class="label2"> Gigante (+60) </label>
+			</div>
+			
+			<div class="DIVdrink">
+				<input type="checkbox" class="CHKdrink" id="CREAM"> <label class="label1">Cappiccino (150) </label>
+				<input type="text" class="TXTdrinks3" placeholder="#" readonly>
+			</div>
+			
+			<div class="DIVsize">
+				<input type="radio" class="RADsize" id="CREAM"> <label class="label2"> Normale </label> <br>
+				<input type="radio" class="RADsize" id="CREAM"> <label class="label2"> Grande (+35) </label> <br>
+				<input type="radio" class="RADsize" id="CREAM"> <label class="label2"> Gigante (+60) </label>
+			</div>
+			
+			<br>
+			
+			<input class="button1" type="button" value="Submit Drink /s">
+			
+		</div>
+		
+		<div class="right"> <br>
+			
+			<span class="orders"> ORDERS </span>
+			<br> <br> <br>
+			
+			<table class="table">
+				<tr>
+					<th style="width: 75%">Drink</th>
+					<th style="width: 25%">Price</th>
+				</tr>
+			</table>
+			
+			<br> <br>
+			
+			<div class="middle">
+				<input type="text" class="TXTdrinks1" placeholder="" readonly>
+				<input type="text" class="TXTdrinks2" placeholder="" readonly>
+				<br> <br> <br>
+				<input type="text" class="TXTdrinks1" placeholder="" readonly>
+				<input type="text" class="TXTdrinks2" placeholder="" readonly>
+				<br> <br> <br>
+				<input type="text" class="TXTdrinks1" placeholder="" readonly>
+				<input type="text" class="TXTdrinks2" placeholder="" readonly>
+			</div>			
+			
+			<div class="bottom">
+				<span style="color:white; font-size:100%; font-weight:bold;"> TOTAL  ORDER</span> 
+				<br>
+				<input type="text" class="total" placeholder="asdasd" readonly>
+				<br> <br>
+				<input class="button2" type="button" value="SUBMIT ORDER">
+				<br> <br> <br>
+				<input class="buttonreset" type="reset" value="Reset Order">
+			</div>
+			
+		</div>
+		
+		<div class="talk">
+			<span> Talk to us: <a href="#"> Facebook </a> & <a href="#"> Twitter </a> </span>
+		</div>
+		
+	</div>
+	
+</form>
+
+<script>
+
+</script>
+
+</body>
+
+</html>
