@@ -1,1 +1,1 @@
-# Human-Computer-Interaction
+HTML - CSS Activity Submissions
